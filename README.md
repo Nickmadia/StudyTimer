@@ -1,0 +1,2 @@
+# StudyTimer
+ simple study timer
