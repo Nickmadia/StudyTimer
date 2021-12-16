@@ -93,6 +93,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(114, 21);
             this.comboBox1.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.comboBox1, "which subject are you studying");
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // TbStudyTime
@@ -169,6 +170,7 @@
             this.Reset.Size = new System.Drawing.Size(75, 23);
             this.Reset.TabIndex = 10;
             this.Reset.Text = "Reset";
+            this.toolTip1.SetToolTip(this.Reset, "reset the timers and current saved data");
             this.Reset.UseVisualStyleBackColor = true;
             this.Reset.Click += new System.EventHandler(this.ResetButton);
             // 
@@ -192,6 +194,7 @@
             this.TbNextPause.Name = "TbNextPause";
             this.TbNextPause.Size = new System.Drawing.Size(115, 20);
             this.TbNextPause.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.TbNextPause, "time till the next pause/study session");
             // 
             // pauseStudy
             // 
@@ -214,6 +217,7 @@
             this.TbElapsedTime.Name = "TbElapsedTime";
             this.TbElapsedTime.Size = new System.Drawing.Size(115, 20);
             this.TbElapsedTime.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.TbElapsedTime, "total time elapsed since the session start");
             this.TbElapsedTime.Click += new System.EventHandler(this.Label5_Click);
             // 
             // label4
