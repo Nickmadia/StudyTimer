@@ -83,7 +83,7 @@ namespace StudyTimer
                     nextPause.Text = this.GetTime((pauseTime - currentTime) / 1000);
                     pauseStudy.Text = "To Next Session";
                 }
-                await Task.Delay(10);
+                await Task.Delay(1000);
             }
             currentTime = 0;
             Console.WriteLine(Interrupt);
