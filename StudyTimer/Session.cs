@@ -85,7 +85,7 @@ namespace StudyTimer
                 }
                 await Task.Delay(1000);
             }
-            currentTime = 0;
+
             Console.WriteLine(Interrupt);
         }
 
