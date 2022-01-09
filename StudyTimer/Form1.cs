@@ -58,6 +58,11 @@ namespace StudyTimer
                         metadata.Sessions.Add(new SessionMetadata(DateTime.Now.ToShortDateString(), session.CurrentSession));
                         Serializer.SerializeJson(dataPath, "data.json", metadata);
                     }
+                    if (subjectsdata != null)
+                    {
+                        subjectsdata.LastSubject = comboBox1.SelectedItem.ToString();
+                        Serializer.SerializeJson("", subjectsPath, subjectsdata);
+                    }
                 }
             };
             session.OnTimeElapsed += async () =>
@@ -105,6 +110,10 @@ namespace StudyTimer
             {
                 subjectsdata = subjects;
                 comboBox1.DataSource = subjectsdata.Subjects;
+                if (subjects.LastSubject != null)
+                {
+                    comboBox1.SelectedItem = subjectsdata.LastSubject;
+                }
             }
         }
 

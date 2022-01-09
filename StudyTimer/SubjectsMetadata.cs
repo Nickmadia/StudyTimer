@@ -11,5 +11,8 @@ namespace StudyTimer
     {
         [JsonProperty("subjects")]
         public List<string> Subjects { get; set; }
+
+        [JsonProperty("last")]
+        public string LastSubject { get; set; }
     }
 }
