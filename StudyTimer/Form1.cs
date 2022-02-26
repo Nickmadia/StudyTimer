@@ -61,6 +61,8 @@ namespace StudyTimer
                     if (subjectsdata != null)
                     {
                         subjectsdata.LastSubject = comboBox1.SelectedItem.ToString();
+                        subjectsdata.LastStudyTime = TbStudyTime.Text;
+                        subjectsdata.LastPauseTime = TbPauseTime.Text;
                         Serializer.SerializeJson("", subjectsPath, subjectsdata);
                     }
                 }
@@ -113,6 +115,11 @@ namespace StudyTimer
                 if (subjects.LastSubject != null)
                 {
                     comboBox1.SelectedItem = subjectsdata.LastSubject;
+                }
+                if (subjects.LastStudyTime != null && subjects.LastPauseTime != null)
+                {
+                    TbStudyTime.Text = subjectsdata.LastStudyTime.ToString();
+                    TbPauseTime.Text = subjectsdata.LastPauseTime.ToString();
                 }
             }
         }

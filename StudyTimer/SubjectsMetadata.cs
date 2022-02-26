@@ -14,5 +14,11 @@ namespace StudyTimer
 
         [JsonProperty("last")]
         public string LastSubject { get; set; }
+
+        [JsonProperty("last_study_time")]
+        public string LastStudyTime { get; set; }
+
+        [JsonProperty("last_pause_time")]
+        public string LastPauseTime { get; set; }
     }
 }
